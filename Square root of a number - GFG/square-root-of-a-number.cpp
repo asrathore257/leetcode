@@ -9,6 +9,7 @@ using namespace std;
 // x: element to find square root
 class Solution{
   public:
+  //x=6 
     long long int floorSqrt(long long int x) 
     {
            if (x < 2) {
@@ -16,7 +17,7 @@ class Solution{
     }
     
     long long start = 0;
-    long long end = x;
+    long long end = x/2;
     long long result = 0;
     
     while (start <= end) {
@@ -28,7 +29,7 @@ class Solution{
         
         if (mid * mid < x) {
             start = mid + 1;
-            result = mid;  
+            result = mid;  // Store the potential floor square root
         } else {
             end = mid - 1;
         }
